@@ -37,101 +37,71 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
       "주요 프로젝트를 카드 형태로 정리했으며, 각 카드를 클릭하면 상세 내용과 이미지를 함께 확인할 수 있습니다.",
     projects: [
       {
-        title: "동아리마트",
-        subtitle: "대학교 동아리 등록 및 모집 웹 서비스",
+        title: "TMOJI",
+        subtitle: "폰트 스타일을 유지하는 이미지 번역 AI 서비스",
         description:
-          "학교 동아리 정보를 쉽게 탐색하고 지원할 수 있도록 제작한 웹 프로젝트입니다.",
+          "이미지 속 텍스트를 번역하면서도 원본의 폰트, 색상, 레이아웃을 최대한 자연스럽게 유지하도록 설계한 졸업과제 프로젝트입니다.",
         techStack: [
-          "Next.js",
           "React",
           "TypeScript",
-          "Prisma",
-          "NextAuth",
-          "Figma",
-          "GitHub Actions",
-          "AWS",
+          "Vite",
+          "Python",
+          "FastAPI",
+          "PyTorch",
+          "Celery",
+          "Redis",
+          "PostgreSQL",
+          "Docker",
+          "AWS EC2",
+          "CloudFront",
         ],
-        githubUrl: "https://github.com/ggomabbang/dongarimart",
-        image: "/projects/dongarimart-main.png",
+        githubUrl:
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10",
+        demoUrl: "https://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web",
+        image:
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/banner.png",
         details: [
           {
             type: "text",
             title: "Overview",
             content:
-              "개발에 관심이 있는 동기 3명과 함께 학교 동아리를 등록하고 부원을 모집할 수 있는 웹 서비스를 개발했습니다.\n\n일반 학생은 부산대학교 홈페이지에서 찾기 어려운 동아리 정보를 쉽게 확인하고 지원할 수 있고, 동아리 관계자는 홍보와 모집 공고 등록을 간편하게 진행할 수 있도록 설계했습니다.",
+              "기존 이미지 번역 서비스는 번역된 텍스트가 원본 이미지의 폰트, 색상, 배치와 자연스럽게 어우러지지 않아 시각적 이질감이 생기는 문제가 있었습니다.\n\n이 프로젝트는 단순한 OCR + 기계 번역 수준을 넘어서, 번역 후의 텍스트를 원본 이미지의 스타일에 맞춰 자연스럽게 재합성하는 것을 목표로 한 졸업과제입니다.",
           },
           {
             type: "text",
-            title: "What I Did",
+            title: "What I Built",
             content:
-              "프로젝트에서 Full-stack 및 프로젝트 리더 역할을 맡았습니다.\n\n직접 Figma로 웹페이지를 설계하고 Next.js 기반 React 프론트엔드를 구현했습니다. 또한 Prisma, Next.js API, NextAuth를 활용한 백엔드 구조를 구상하고 백엔드 담당과 협력하여 구현을 진행했습니다.\n\n이 과정에서 GitHub 협업, GitHub Actions를 활용한 빌드 자동화, AWS 배포 경험을 쌓았습니다.",
+              "저는 주로 서비스 개발 파트를 담당했습니다.\n\n프론트엔드는 Vite + React + TypeScript로 구현했고, 빌드 결과물은 AWS CloudFront를 통해 배포했습니다. 백엔드는 Python과 FastAPI 기반의 REST API로 구성했으며, RDBMS와 Redis를 사용해 데이터를 관리했습니다. 또한 Docker로 각 서비스를 컨테이너화하여 AWS EC2 환경에 배포했습니다.\n\nAI 모델은 별도의 서버에서 동작하도록 분리했고, 백엔드 서버가 이를 호출하여 작업을 관리하도록 구성했습니다. 고부하 상황에서도 안정적으로 처리할 수 있도록 Celery와 Redis를 이용한 비동기 분산 처리 구조를 설계했습니다.",
+          },
+          {
+            type: "text",
+            title: "AI / System Point",
+            content:
+              "OCR 기반 텍스트 인식에 더해, 확산 모델 기반 TextCtrl을 활용하여 문자 스타일과 글리프를 학습하고 번역 후 텍스트를 자연스럽게 이미지에 합성할 수 있도록 했습니다.\n\n또한 영어·일본어·한국어에 대응할 수 있도록 다국어 폰트를 이용해 모델을 재학습했고, 실사용 가능한 서비스 형태를 목표로 프론트엔드, 백엔드, AI 모델 서버를 분리한 시스템을 구성했습니다. ELB 기반의 라우팅 및 포트 연결 구조도 설계하며 실제 운영을 고려한 인프라 구조를 경험했습니다.",
           },
           {
             type: "image",
-            src: "/projects/dongarimart-architecture.png",
-            alt: "동아리마트 아키텍처",
-            caption: "동아리마트 서비스 아키텍처",
+            src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/sample.gif",
+            alt: "TMOJI 메인 화면",
+            caption: "TMOJI 메인 화면",
           },
           {
             type: "image",
-            src: "/projects/dongarimart-main.png",
-            alt: "동아리마트 메인 화면",
-            caption: "동아리마트 메인 화면",
-          },
-          {
-            type: "image",
-            src: "/projects/dongarimart-list.png",
-            alt: "동아리마트 목록 화면",
-            caption: "동아리 탐색 및 목록 화면",
+            src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/system.png",
+            alt: "TMOJI 처리 흐름",
+            caption: "이미지 번역 및 비동기 처리 흐름",
           },
           {
             type: "text",
-            title: "Points",
+            title: "My Contribution",
             content:
-              "단순한 학교 커뮤니티 성격의 프로젝트가 아니라, 실제 사용자를 기준으로 정보 탐색과 지원 흐름을 고려해 설계했다는 점이 강점이었습니다.\n\n특히 디자인, 프론트엔드 구현, 인증 및 API 연동 구조 이해, 배포 경험까지 폭넓게 경험할 수 있었던 프로젝트입니다.",
-          },
-        ],
-      },
-      {
-        title: "AID 동아리 홈페이지",
-        subtitle: "GitHub Pages 기반 동아리 소개 웹사이트",
-        description:
-          "백엔드 서버 없이 운영 비용을 줄이면서 제작한 동아리 소개용 웹사이트입니다.",
-        techStack: [
-          "Next.js",
-          "React",
-          "TypeScript",
-          "GitHub Pages",
-          "Notion API",
-          "GitHub Actions",
-        ],
-        githubUrl: "https://github.com/PNU-AID/homepage",
-        demoUrl: "https://pnu-aid.github.io/homepage/",
-        image: "/projects/aid-homepage-main.png",
-        details: [
-          {
-            type: "text",
-            title: "Overview",
-            content:
-              "부산대학교 정보컴퓨터공학부 AI 동아리 AID를 소개하기 위한 홈페이지 프로젝트입니다.\n\n동아리 소개, 활동 기록, 구성원 안내 등 필요한 정보를 전달하면서도 서버 운영 비용을 최소화하는 방향으로 설계했습니다.",
+              "이 프로젝트에서 저는 완성된 AI 모델을 실제로 검증할 수 있는 웹 애플리케이션 구현, 프론트엔드와 백엔드 개발, AI 모델 서버와의 연동, 그리고 배포 구조 설계에 집중했습니다.\n\n특히 단일 서버에서 모든 기능을 처리하는 방식이 아니라, 서비스 서버와 AI 작업 서버를 분리하고 비동기 스케줄링 구조를 설계함으로써 실용성과 확장성을 고려한 시스템을 구현한 점이 큰 경험이었습니다.",
           },
           {
             type: "text",
-            title: "What I Did",
+            title: "Repository",
             content:
-              "백엔드 서버를 두지 않고 최소한의 기능만으로 프론트엔드 중심 구조를 설계했으며, GitHub Pages를 통해 정적 호스팅했습니다.\n\n데이터 저장소로는 Notion API를 사용했고, 브라우저 환경에서 발생하는 CORS 문제를 해결하기 위해 GitHub Actions를 활용한 방식으로 대응했습니다.",
-          },
-          {
-            type: "image",
-            src: "/projects/aid-homepage-main.png",
-            alt: "AID 동아리 홈페이지 메인 화면",
-            caption: "AID 동아리 홈페이지 메인 화면",
-          },
-          {
-            type: "text",
-            title: "Points",
-            content:
-              "단순히 화면만 만드는 데서 끝나지 않고, 비용 절감과 운영 편의성까지 고려한 점이 핵심이었습니다.\n\n정적 사이트 호스팅, 외부 API 활용, CORS 우회 및 자동화 경험을 함께 담은 프로젝트입니다.",
+              "Main Repository\nhttps://github.com/pnucse-capstone2025/Capstone-2025-team-10\n\nFrontend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web\n\nBackend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-server",
           },
         ],
       },
@@ -249,6 +219,105 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           },
         ],
       },
+      {
+        title: "AID 동아리 홈페이지",
+        subtitle: "GitHub Pages 기반 동아리 소개 웹사이트",
+        description:
+          "백엔드 서버 없이 운영 비용을 줄이면서 제작한 동아리 소개용 웹사이트입니다.",
+        techStack: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "GitHub Pages",
+          "Notion API",
+          "GitHub Actions",
+        ],
+        githubUrl: "https://github.com/PNU-AID/homepage",
+        demoUrl: "https://pnu-aid.github.io/homepage/",
+        image: "/projects/aid-homepage-main.png",
+        details: [
+          {
+            type: "text",
+            title: "Overview",
+            content:
+              "부산대학교 정보컴퓨터공학부 AI 동아리 AID를 소개하기 위한 홈페이지 프로젝트입니다.\n\n동아리 소개, 활동 기록, 구성원 안내 등 필요한 정보를 전달하면서도 서버 운영 비용을 최소화하는 방향으로 설계했습니다.",
+          },
+          {
+            type: "text",
+            title: "What I Did",
+            content:
+              "백엔드 서버를 두지 않고 최소한의 기능만으로 프론트엔드 중심 구조를 설계했으며, GitHub Pages를 통해 정적 호스팅했습니다.\n\n데이터 저장소로는 Notion API를 사용했고, 브라우저 환경에서 발생하는 CORS 문제를 해결하기 위해 GitHub Actions를 활용한 방식으로 대응했습니다.",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-homepage-main.png",
+            alt: "AID 동아리 홈페이지 메인 화면",
+            caption: "AID 동아리 홈페이지 메인 화면",
+          },
+          {
+            type: "text",
+            title: "Points",
+            content:
+              "단순히 화면만 만드는 데서 끝나지 않고, 비용 절감과 운영 편의성까지 고려한 점이 핵심이었습니다.\n\n정적 사이트 호스팅, 외부 API 활용, CORS 우회 및 자동화 경험을 함께 담은 프로젝트입니다.",
+          },
+        ],
+      },
+      {
+        title: "동아리마트",
+        subtitle: "대학교 동아리 등록 및 모집 웹 서비스",
+        description:
+          "학교 동아리 정보를 쉽게 탐색하고 지원할 수 있도록 제작한 웹 프로젝트입니다.",
+        techStack: [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Prisma",
+          "NextAuth",
+          "Figma",
+          "GitHub Actions",
+          "AWS",
+        ],
+        githubUrl: "https://github.com/ggomabbang/dongarimart",
+        image: "/projects/dongarimart-main.png",
+        details: [
+          {
+            type: "text",
+            title: "Overview",
+            content:
+              "개발에 관심이 있는 동기 3명과 함께 학교 동아리를 등록하고 부원을 모집할 수 있는 웹 서비스를 개발했습니다.\n\n일반 학생은 부산대학교 홈페이지에서 찾기 어려운 동아리 정보를 쉽게 확인하고 지원할 수 있고, 동아리 관계자는 홍보와 모집 공고 등록을 간편하게 진행할 수 있도록 설계했습니다.",
+          },
+          {
+            type: "text",
+            title: "What I Did",
+            content:
+              "프로젝트에서 Full-stack 및 프로젝트 리더 역할을 맡았습니다.\n\n직접 Figma로 웹페이지를 설계하고 Next.js 기반 React 프론트엔드를 구현했습니다. 또한 Prisma, Next.js API, NextAuth를 활용한 백엔드 구조를 구상하고 백엔드 담당과 협력하여 구현을 진행했습니다.\n\n이 과정에서 GitHub 협업, GitHub Actions를 활용한 빌드 자동화, AWS 배포 경험을 쌓았습니다.",
+          },
+          {
+            type: "image",
+            src: "/projects/dongarimart-architecture.png",
+            alt: "동아리마트 아키텍처",
+            caption: "동아리마트 서비스 아키텍처",
+          },
+          {
+            type: "image",
+            src: "/projects/dongarimart-main.png",
+            alt: "동아리마트 메인 화면",
+            caption: "동아리마트 메인 화면",
+          },
+          {
+            type: "image",
+            src: "/projects/dongarimart-list.png",
+            alt: "동아리마트 목록 화면",
+            caption: "동아리 탐색 및 목록 화면",
+          },
+          {
+            type: "text",
+            title: "Points",
+            content:
+              "단순한 학교 커뮤니티 성격의 프로젝트가 아니라, 실제 사용자를 기준으로 정보 탐색과 지원 흐름을 고려해 설계했다는 점이 강점이었습니다.\n\n특히 디자인, 프론트엔드 구현, 인증 및 API 연동 구조 이해, 배포 경험까지 폭넓게 경험할 수 있었던 프로젝트입니다.",
+          },
+        ],
+      },
     ],
   },
 
@@ -257,6 +326,74 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
     description:
       "Selected projects are presented as cards, and each card can be expanded to view detailed content with images.",
     projects: [
+      {
+        title: "TMOJI",
+        subtitle: "AI image translation service that preserves font style",
+        description:
+          "A graduation project that translates text inside images while preserving the original font style, color, and layout as naturally as possible.",
+        techStack: [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Python",
+          "FastAPI",
+          "PyTorch",
+          "Celery",
+          "Redis",
+          "PostgreSQL",
+          "Docker",
+          "AWS EC2",
+          "CloudFront",
+        ],
+        githubUrl:
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10",
+        demoUrl: "https://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web",
+        image: "/projects/tmoji-main.png",
+        details: [
+          {
+            type: "text",
+            title: "Overview",
+            content:
+              "Existing image translation services often produce visually awkward results because the translated text does not blend naturally with the original font, color, and layout of the image.\n\nThis graduation project aimed to go beyond simple OCR and machine translation by rebuilding translated text so that it matches the visual style of the original image more naturally.",
+          },
+          {
+            type: "text",
+            title: "What I Built",
+            content:
+              "I mainly took charge of the service development side.\n\nThe frontend was implemented with Vite, React, and TypeScript, and the built files were distributed through AWS CloudFront. The backend was designed as a REST API using Python and FastAPI, while data was managed with an RDBMS and Redis. Each part of the system was containerized with Docker and deployed on AWS EC2.\n\nThe AI model was separated onto its own server, and the backend was responsible for calling and managing AI tasks. To keep the system stable under heavy load, I designed an asynchronous distributed processing structure using Celery and Redis.",
+          },
+          {
+            type: "text",
+            title: "AI / System Point",
+            content:
+              "In addition to OCR-based text recognition, the project used TextCtrl based on diffusion models to learn text style and glyph features, allowing translated text to be synthesized back into the image more naturally.\n\nThe model was retrained with multilingual fonts to support English, Japanese, and Korean. To make the service practical, the frontend, backend, and AI model server were separated, and the infrastructure was designed with routing and port connections in mind for real deployment scenarios.",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-main.png",
+            alt: "TMOJI main page",
+            caption: "Main page of TMOJI",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-flow.png",
+            alt: "TMOJI processing flow",
+            caption: "Image translation and asynchronous processing flow",
+          },
+          {
+            type: "text",
+            title: "My Contribution",
+            content:
+              "My contribution focused on implementing the web application used to validate the completed AI model, building the frontend and backend, integrating the AI model server, and designing the deployment structure.\n\nA key learning point was designing a practical and scalable system by separating the service server from the AI task server and managing requests through asynchronous scheduling rather than processing everything on a single server.",
+          },
+          {
+            type: "text",
+            title: "Repository",
+            content:
+              "Main Repository\nhttps://github.com/pnucse-capstone2025/Capstone-2025-team-10\n\nFrontend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web\n\nBackend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-server",
+          },
+        ],
+      },
       {
         title: "Dongari Mart",
         subtitle: "University club registration and recruitment web service",
@@ -478,6 +615,74 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
     description:
       "主なプロジェクトをカード形式で整理し、各カードをクリックすると画像付きの詳細内容を確認できます。",
     projects: [
+      {
+        title: "TMOJI",
+        subtitle: "フォントスタイルを保持する画像翻訳AIサービス",
+        description:
+          "画像内テキストを翻訳しながら、元画像のフォント、色、レイアウトをできるだけ自然に維持することを目指した卒業課題プロジェクトです。",
+        techStack: [
+          "React",
+          "TypeScript",
+          "Vite",
+          "Python",
+          "FastAPI",
+          "PyTorch",
+          "Celery",
+          "Redis",
+          "PostgreSQL",
+          "Docker",
+          "AWS EC2",
+          "CloudFront",
+        ],
+        githubUrl:
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10",
+        demoUrl: "https://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web",
+        image: "/projects/tmoji-main.png",
+        details: [
+          {
+            type: "text",
+            title: "Overview",
+            content:
+              "既存の画像翻訳サービスでは、翻訳後の文字が元画像のフォント、色、レイアウトと自然に調和せず、視覚的な違和感が生じるという課題がありました。\n\nこの卒業課題では、単純なOCRと機械翻訳にとどまらず、翻訳後の文字を元画像のスタイルに合わせて自然に再合成することを目標にしました。",
+          },
+          {
+            type: "text",
+            title: "What I Built",
+            content:
+              "私は主にサービス開発パートを担当しました。\n\nフロントエンドは Vite・React・TypeScript で実装し、ビルド後の成果物は AWS CloudFront を通じて配信しました。バックエンドは Python と FastAPI による REST API として構成し、RDBMS と Redis を用いてデータを管理しました。さらに各サービスを Docker でコンテナ化し、AWS EC2 上にデプロイしました。\n\nAIモデルは別サーバーで動作するよう分離し、バックエンドがそれを呼び出して管理する構成にしました。高負荷時にも安定して処理できるよう、Celery と Redis を用いた非同期分散処理構成を設計しました。",
+          },
+          {
+            type: "text",
+            title: "AI / System Point",
+            content:
+              "OCRによる文字認識に加えて、拡散モデルベースの TextCtrl を活用し、文字スタイルやグリフを学習することで、翻訳後のテキストを画像へ自然に合成できるようにしました。\n\nまた、英語・日本語・韓国語に対応するため多言語フォントでモデルを再学習しました。実用的なサービスを目指し、フロントエンド、バックエンド、AIモデルサーバーを分離した構成を採用し、ELB を含むルーティングやポート接続も考慮したインフラ設計を経験しました。",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-main.png",
+            alt: "TMOJI メイン画面",
+            caption: "TMOJI メイン画面",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-flow.png",
+            alt: "TMOJI 処理フロー",
+            caption: "画像翻訳および非同期処理フロー",
+          },
+          {
+            type: "text",
+            title: "My Contribution",
+            content:
+              "このプロジェクトでは、完成したAIモデルを実際に検証できるWebアプリケーションの実装、フロントエンドとバックエンドの開発、AIモデルサーバーとの連携、そしてデプロイ構成の設計に注力しました。\n\n特に、単一サーバーですべてを処理するのではなく、サービスサーバーとAIタスクサーバーを分離し、非同期スケジューリング構造を設計したことで、実用性と拡張性を意識したシステム構築を経験できた点が大きな学びでした。",
+          },
+          {
+            type: "text",
+            title: "Repository",
+            content:
+              "Main Repository\nhttps://github.com/pnucse-capstone2025/Capstone-2025-team-10\n\nFrontend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-web\n\nBackend\nhttps://github.com/PNU-CSE-Graduation-TMOJI/tmoji-server",
+          },
+        ],
+      },
       {
         title: "동아리마트",
         subtitle: "大学サークル登録・募集Webサービス",
