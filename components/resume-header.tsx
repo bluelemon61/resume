@@ -11,7 +11,7 @@ export function ResumeHeader({
   content: ResumeContent;
 }) {
   return (
-    <header className="mb-8 rounded-[32px] border border-slate-200 bg-white p-8 shadow-soft print:mb-4 print:rounded-none print:border print:p-5 print:shadow-none">
+    <header className="mb-8 rounded-4xl border border-slate-200 bg-white p-8 shadow-soft print:mb-4 print:rounded-none print:border print:p-5 print:shadow-none">
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-2xl">
           <p className="text-md font-bold uppercase tracking-[0.25em] text-slate-500">
@@ -38,14 +38,14 @@ export function ResumeHeader({
             href={content.hero.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-block font-medium text-slate-900 underline underline-offset-4"
+            className="inline-block rounded-full font-medium bg-black px-4 py-2 text-sm text-white underline underline-offset-4"
           >
             GitHub
           </a>
           <div className="no-print">
             <Link
               href={`/${lang}/portfolio/`}
-              className="inline-flex rounded-full bg-slate-300 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
+              className="inline-flex rounded-full bg-gray-600 px-4 py-2 text-sm font-medium text-white transition hover:opacity-90"
             >
               {content.nav.portfolio}
             </Link>

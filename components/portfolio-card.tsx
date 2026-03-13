@@ -69,7 +69,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full bg-slate-300 px-4 py-2 text-white"
+                className="rounded-full bg-black px-4 py-2 text-white"
               >
                 GitHub
               </a>
@@ -111,15 +111,17 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
                   key={`${project.title}-image-${index}`}
                   className="space-y-3"
                 >
-                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl bg-slate-100">
+                  <div className="w-full max-w-[1024px]">
                     <Image
                       src={block.src}
                       alt={block.alt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 800px"
+                      width={1024}
+                      height={1024}
+                      className="h-auto max-w-full w-auto rounded-2xl"
+                      sizes="(max-width: 1024px) 100vw, 1024px"
                     />
                   </div>
+
                   {block.caption && (
                     <figcaption className="text-xs leading-6 text-slate-500">
                       {block.caption}

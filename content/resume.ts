@@ -60,7 +60,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       name: "이동훈",
       role: "Frontend / Full Stack Developer",
       summary:
-        "웹 애플리케이션 개발과 사용자 경험 개선에 관심이 있는 개발자입니다. React, Next.js, TypeScript 기반의 프론트엔드와 FastAPI 기반 백엔드 경험을 가지고 있으며, AI 프로젝트와 해커톤 경험도 보유하고 있습니다.",
+        "웹 애플리케이션 개발과 인프라 영역에 관심이 있는 개발자입니다. React, Next.js, TypeScript 기반의 프론트엔드와 FastAPI 기반 백엔드 경험을 가지고 있으며, AI 프로젝트와 해커톤 경험도 보유하고 있습니다.",
       email: "ldh7588@gmail.com",
       phone: "+82 10-5516-2468",
       address: "한국",
@@ -81,7 +81,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
         detail: "졸업예정 / GPA 3.84 / 4.5",
       },
       {
-        school: "시즈오카대학, 일본",
+        school: "시즈오카대학",
         major: "정보과학과",
         period: "2025.10 ~ 2026.03",
         detail: "교환학생",
@@ -150,13 +150,13 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       portfolio: "Portfolio",
     },
     hero: {
-      name: "Donghoon Lee",
+      name: "Donghun Lee",
       role: "Frontend / Full Stack Developer",
       summary:
-        "A developer interested in web application development and improving user experience. Experienced in frontend development using React, Next.js, and TypeScript, backend development with FastAPI, and AI projects including hackathons.",
+        "I am a developer interested in web application development and infrastructure. I have experience building frontend applications with React, Next.js, and TypeScript, as well as backend services using FastAPI. I have also participated in AI projects and hackathons.",
       email: "ldh7588@gmail.com",
       phone: "+82 10-5516-2468",
-      address: "Republic of Korea",
+      address: "South Korea",
       github: "https://github.com/bluelemon61",
       birth: "2001.03.30",
     },
@@ -164,18 +164,18 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       education: "Education",
       experience: "Experience",
       awards: "Awards",
-      skills: "Technical Skills",
+      skills: "Skills",
     },
     education: [
       {
-        school: "Pusan National University, Republic of Korea",
-        major: "School of Computer Science and Engineering",
+        school: "Pusan National University",
+        major: "Computer Science and Engineering",
         period: "2020.03 ~ 2026.08",
         detail: "Expected Graduation / GPA 3.84 / 4.5",
       },
       {
-        school: "Shizuoka University, Japan",
-        major: "Department of Information Science",
+        school: "Shizuoka University",
+        major: "Computer Science",
         period: "2025.10 ~ 2026.03",
         detail: "Exchange Student",
       },
@@ -183,21 +183,21 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     experience: [
       {
         title: "Intern · Front-End",
-        company: "Soft Squared",
+        company: "Soft Squared Inc.",
         period: "2025.01 ~ 2025.02",
         duration: "2 months",
         bullets: [
-          "Performed QC and defect fixes for three SI projects",
-          "Responsible for React-based frontend development",
+          "Performed QC and maintenance for three SI projects",
+          "Worked on React-based frontend development",
         ],
       },
       {
         title: "Intern · Full Stack Developer",
-        company: "Foxee",
+        company: "Foxee Inc.",
         period: "2024.07 ~ 2024.08",
         duration: "2 months",
         bullets: [
-          "Maintained an existing project and developed a prototype for a new project",
+          "Maintained existing projects and developed prototypes for new services",
           "Experience with React frontend, FastAPI backend, and Flutter development",
         ],
       },
@@ -205,21 +205,20 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     awards: [
       {
         title: "Capstone Design - Silver Prize (Software & AI Division)",
-        organization:
-          "Pusan National University, School of Computer Science and Engineering",
+        organization: "Pusan National University, School of Computer Science",
         detail:
           "Natural image translation and text synthesis using deep learning models",
       },
       {
-        title: "KHUthon 2024 Top Excellence Award",
+        title: "KHUthon 2024 Grand Prize",
         organization: "Kyung Hee University",
         detail:
-          "Desktop AI assistant application for saving computing resources / Electron, Next.js",
+          "AI assistant desktop app to reduce computing resource usage / Electron, Next.js",
       },
       {
-        title: "Grand Prize, Construction Site Safety Data AI Hackathon",
-        organization: "NIA & ILJOO GnS",
-        detail: "Trained classification models using PyTorch and EfficientNet",
+        title: "AI Hackathon Grand Prize for Construction Site Safety Data",
+        organization: "NIA & Ilju GNS",
+        detail: "Trained classification model using PyTorch and EfficientNet",
       },
     ],
     skillLabels: {
@@ -241,14 +240,14 @@ export const resumeContent: Record<Lang, ResumeContent> = {
   },
   ja: {
     nav: {
-      profile: "Profile",
-      portfolio: "Portfolio",
+      profile: "プロフィール",
+      portfolio: "ポートフォリオ",
     },
     hero: {
       name: "イ・ドンフン",
       role: "Frontend / Full Stack Developer",
       summary:
-        "Webアプリケーション開発とユーザー体験の改善に関心を持つ開発者です。React・Next.js・TypeScriptを用いたフロントエンド開発、FastAPIを用いたバックエンド開発、さらにAIプロジェクトやハッカソンの経験があります。",
+        "Webアプリケーション開発とインフラ領域に関心を持つエンジニアです。React、Next.js、TypeScriptを用いたフロントエンド開発と、FastAPIを用いたバックエンド開発の経験があります。また、AIプロジェクトやハッカソンへの参加経験もあります。",
       email: "ldh7588@gmail.com",
       phone: "+82 10-5516-2468",
       address: "韓国",
@@ -259,12 +258,12 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       education: "学歴",
       experience: "経験",
       awards: "受賞",
-      skills: "技術スタック",
+      skills: "スキル",
     },
     education: [
       {
-        school: "釜山大学校、韓国",
-        major: "情報コンピュータ工学部",
+        school: "釜山大学",
+        major: "情報コンピューター工学部",
         period: "2020.03 ~ 2026.08",
         detail: "卒業予定 / GPA 3.84 / 4.5",
       },
@@ -278,12 +277,12 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     experience: [
       {
         title: "インターン · Front-End",
-        company: "Soft Squared",
+        company: "SoftSquared",
         period: "2025.01 ~ 2025.02",
         duration: "2ヶ月",
         bullets: [
-          "SIプロジェクト3件のQCおよび不具合修正を担当",
-          "Reactベースのフロントエンド開発を担当",
+          "SIプロジェクト3件のQCおよび保守対応を担当",
+          "Reactベースのフロントエンド開発業務を担当",
         ],
       },
       {
@@ -299,21 +298,21 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     ],
     awards: [
       {
-        title: "キャップストーンデザイン 銀賞（ソフトウェア・AI部門）",
-        organization: "釜山大学校 情報コンピュータ工学部",
+        title: "キャップストーンデザイン ソフトウェア・AI部門 銀賞",
+        organization: "釜山大学 情報コンピューター工学部",
         detail:
-          "ディープラーニングモデルを用いた自然な画像翻訳およびテキスト合成",
+          "ディープラーニングモデルを活用した自然な画像翻訳およびテキスト合成",
       },
       {
         title: "KHUthon 2024 最優秀賞",
-        organization: "慶熙大学校",
+        organization: "慶熙大学",
         detail:
           "計算資源の節約を支援するAIアシスタントデスクトップアプリ / Electron, Next.js",
       },
       {
-        title: "工事現場安全データAIハッカソン 大賞",
-        organization: "NIA & ILJOO GnS",
-        detail: "PyTorch・EfficientNetを用いた分類モデルの学習",
+        title: "建設現場安全データAIハッカソン 大賞",
+        organization: "NIA & イルジュGNS",
+        detail: "PyTorch、EfficientNetベースの分類モデル学習",
       },
     ],
     skillLabels: {
