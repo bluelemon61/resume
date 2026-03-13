@@ -26,7 +26,7 @@ export default async function PortfolioPage({
   return (
     <main className="min-h-screen bg-slate-50 py-10 text-slate-900">
       <Container>
-        <header className="mb-8 rounded-[32px] border border-slate-200 bg-white p-8 shadow-soft print:rounded-none print:border print:p-5 print:shadow-none">
+        <header className="mb-8 rounded-4xl border border-slate-200 bg-white p-8 shadow-soft print:rounded-none print:border print:p-5 print:shadow-none">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div>
               <p className="text-sm font-medium uppercase tracking-[0.25em] text-slate-500">

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import type { PortfolioProject } from "@/content/portfolio";
+import { withBasePath } from "@/lib/utils";
 
 export function PortfolioCard({ project }: { project: PortfolioProject }) {
   const [open, setOpen] = useState(false);
@@ -16,9 +17,13 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
         className="flex w-full flex-col text-left"
       >
         {project.image && (
-          <div className="relative aspect-[16/9] w-full bg-slate-100">
+          <div className="relative aspect-video w-full bg-slate-100">
             <Image
-              src={project.image}
+              src={
+                project.image.startsWith("http")
+                  ? project.image
+                  : withBasePath(project.image)
+              }
               alt={project.title}
               fill
               className="object-cover"
@@ -111,7 +116,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
                   key={`${project.title}-image-${index}`}
                   className="space-y-3"
                 >
-                  <div className="w-full max-w-[1024px]">
+                  <div className="w-full max-w-5xl">
                     <Image
                       src={block.src}
                       alt={block.alt}
