@@ -118,7 +118,11 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
                 >
                   <div className="w-full max-w-5xl">
                     <Image
-                      src={block.src}
+                      src={
+                        block.src.startsWith("http")
+                          ? block.src
+                          : withBasePath(block.src)
+                      }
                       alt={block.alt}
                       width={1024}
                       height={1024}
