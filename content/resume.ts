@@ -62,7 +62,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       summary:
         "웹 애플리케이션 개발과 인프라 영역에 관심이 있는 개발자입니다. React, Next.js, TypeScript 기반의 프론트엔드와 FastAPI 기반 백엔드 경험을 가지고 있으며, AI 프로젝트와 해커톤 경험도 보유하고 있습니다.",
       email: "ldh7588@gmail.com",
-      phone: "+82 10-5516-2468",
+      phone: "010-5516-2468",
       address: "한국",
       github: "https://github.com/bluelemon61",
       birth: "2001.03.30",
@@ -112,18 +112,18 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     awards: [
       {
         title: "캡스톤디자인 - 소프트웨어·인공지능 분과 은상",
-        organization: "부산대학교 정보컴퓨터공학부",
+        organization: "부산대학교 정보컴퓨터공학부, 2025.10",
         detail: "딥러닝 모델을 활용한 자연스러운 이미지 번역 및 텍스트 합성",
       },
       {
         title: "KHUthon 2024 최우수상",
-        organization: "경희대학교",
+        organization: "경희대학교, 2024.05",
         detail:
           "컴퓨팅 자원 절약을 도와주는 AI 비서 데스크탑 앱 / Electron, Next.js",
       },
       {
         title: "공사현장 안전 데이터 AI 해커톤 대상",
-        organization: "NIA & 일주지앤에스",
+        organization: "NIA & ㈜일주지앤에스, 2023.12",
         detail: "PyTorch, EfficientNet 기반 분류 모델 학습",
       },
     ],
@@ -205,19 +205,20 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     awards: [
       {
         title: "Capstone Design - Silver Prize (Software & AI Division)",
-        organization: "Pusan National University, School of Computer Science",
+        organization:
+          "Pusan National University, School of Computer Science, 2025.10",
         detail:
           "Natural image translation and text synthesis using deep learning models",
       },
       {
         title: "KHUthon 2024 Grand Prize",
-        organization: "Kyung Hee University",
+        organization: "Kyung Hee University, 2024.05",
         detail:
           "AI assistant desktop app to reduce computing resource usage / Electron, Next.js",
       },
       {
         title: "AI Hackathon Grand Prize for Construction Site Safety Data",
-        organization: "NIA & Ilju GNS",
+        organization: "NIA & ILJOO GnS, 2023.12",
         detail: "Trained classification model using PyTorch and EfficientNet",
       },
     ],
@@ -244,12 +245,12 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       portfolio: "ポートフォリオ",
     },
     hero: {
-      name: "イ・ドンフン",
-      role: "Frontend / Full Stack Developer",
+      name: "Lee Donghoon",
+      role: "イ・ドンフン - Frontend / Full Stack Developer",
       summary:
         "Webアプリケーション開発とインフラ領域に関心を持つエンジニアです。React、Next.js、TypeScriptを用いたフロントエンド開発と、FastAPIを用いたバックエンド開発の経験があります。また、AIプロジェクトやハッカソンへの参加経験もあります。",
       email: "ldh7588@gmail.com",
-      phone: "+82 10-5516-2468",
+      phone: "070-5570-4066",
       address: "韓国",
       github: "https://github.com/bluelemon61",
       birth: "2001.03.30",
@@ -299,19 +300,19 @@ export const resumeContent: Record<Lang, ResumeContent> = {
     awards: [
       {
         title: "キャップストーンデザイン ソフトウェア・AI部門 銀賞",
-        organization: "釜山大学 情報コンピューター工学部",
+        organization: "釜山大学 情報コンピューター工学部, 2025.10",
         detail:
           "ディープラーニングモデルを活用した自然な画像翻訳およびテキスト合成",
       },
       {
         title: "KHUthon 2024 最優秀賞",
-        organization: "慶熙大学",
+        organization: "慶熙大学, 2024.05",
         detail:
           "計算資源の節約を支援するAIアシスタントデスクトップアプリ / Electron, Next.js",
       },
       {
         title: "建設現場安全データAIハッカソン 大賞",
-        organization: "NIA & イルジュGNS",
+        organization: "NIA & ILJOO GnS, 2023.12",
         detail: "PyTorch、EfficientNetベースの分類モデル学習",
       },
     ],

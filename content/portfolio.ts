@@ -82,12 +82,19 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           {
             type: "image",
             src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/sample.gif",
-            alt: "TMOJI 메인 화면",
-            caption: "TMOJI 메인 화면",
+            alt: "TMOJI 이용 영상",
+            caption: "TMOJI 이용 영상",
           },
           {
             type: "image",
-            src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/system.png",
+            src: "/projects/tmoji-flow.png",
+            alt: "TMOJI 화면 흐름 (텍스트 지정 → OCR → 번역확인 → 이미지 합성)",
+            caption:
+              "TMOJI 화면 흐름 (텍스트 지정 → OCR → 번역확인 → 이미지 합성)",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-system.png",
             alt: "TMOJI 처리 흐름",
             caption: "이미지 번역 및 비동기 처리 흐름",
           },
@@ -218,6 +225,18 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             caption: "대회 진행 · 접수 애플리케이션 메인 화면",
           },
           {
+            type: "image",
+            src: "/projects/aid-camp2-admin.png",
+            alt: "대회 진행 접수 애플리케이션 관리자 화면",
+            caption: "대회 진행 · 접수 애플리케이션 관리자 화면",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-camp2-team.png",
+            alt: "대회 진행 접수 애플리케이션 참가 팀 화면",
+            caption: "대회 진행 · 접수 애플리케이션 참가 팀 화면",
+          },
+          {
             type: "text",
             title: "Challenges & Solutions",
             content:
@@ -246,7 +265,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
         githubUrl: "https://github.com/PNU-AID/homepage",
         demoUrl: "https://pnu-aid.github.io/homepage/",
-        image: "/projects/aid-homepage-main.png",
+        image: "/projects/aid-homepage-main-thumbnail.png",
         details: [
           {
             type: "text",
@@ -347,7 +366,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
   en: {
     title: "Portfolio",
     description:
-      "Major projects are organized as cards. Click each card to view detailed descriptions and images.",
+      "Major projects are organized in a card format. Click each card to view detailed descriptions and images.",
     projects: [
       {
         title: "TMOJI",
@@ -369,7 +388,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "CloudFront",
         ],
         githubUrl:
-          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10",
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/blob/main/README-EN.md",
         demoUrl: "https://tmoji.org/",
         image:
           "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/banner.png",
@@ -378,37 +397,44 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "Many existing image translation services produce unnatural results because translated text does not visually match the original font, color, and layout.\n\nThis project aims to go beyond simple OCR and machine translation by re-synthesizing translated text so that it naturally fits the original image style.",
+              "Many existing image translation services produce unnatural results because translated text does not visually match the original image’s font, color, and layout.\n\nThis project goes beyond simple OCR and machine translation by re-synthesizing translated text so that it naturally fits the style of the original image.",
           },
           {
             type: "text",
             title: "What I Built",
             content:
-              "I mainly worked on the service development.\n\nThe frontend was implemented using Vite, React, and TypeScript and deployed via AWS CloudFront. The backend was built with Python and FastAPI as a REST API, using PostgreSQL and Redis for data management. Each component was containerized with Docker and deployed on AWS EC2.\n\nThe AI model runs on a separate server, and the backend manages inference requests by communicating with that server. To handle heavy workloads reliably, I designed an asynchronous distributed processing system using Celery and Redis.",
+              "I mainly worked on the service development.\n\nThe frontend was implemented using Vite, React, and TypeScript, and the build output was deployed through AWS CloudFront. The backend was built as a REST API using Python and FastAPI, with PostgreSQL and Redis for data management. Each service was containerized with Docker and deployed on AWS EC2.\n\nThe AI model runs on a separate server, and the backend manages inference tasks by calling that server. To handle heavy workloads reliably, I designed an asynchronous distributed processing system using Celery and Redis.",
           },
           {
             type: "text",
             title: "AI / System Point",
             content:
-              "In addition to OCR-based text recognition, we used the diffusion-based TextCtrl model to learn character styles and glyphs so that translated text can be naturally synthesized back into the image.\n\nTo support English, Japanese, and Korean, the model was retrained with multilingual fonts. The system architecture separates frontend, backend, and AI model servers to reflect a practical service environment. I also designed routing and port connections using nginx to simulate real-world infrastructure.",
+              "In addition to OCR-based text recognition, we used the diffusion-based TextCtrl model to learn character styles and glyphs, enabling translated text to be naturally synthesized back into the image.\n\nTo support English, Japanese, and Korean, the model was retrained with multilingual fonts. The system architecture separates the frontend, backend, and AI model servers to build a practical service structure. I also designed routing and port connections using nginx to simulate a real production environment.",
           },
           {
             type: "image",
             src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/sample.gif",
-            alt: "TMOJI main screen",
-            caption: "TMOJI main interface",
+            alt: "TMOJI usage demo",
+            caption: "TMOJI usage demo",
           },
           {
             type: "image",
-            src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/system.png",
-            alt: "TMOJI processing flow",
-            caption: "Image translation and asynchronous processing flow",
+            src: "/projects/tmoji-flow.png",
+            alt: "TMOJI UI flow (text selection → OCR → translation review → image synthesis)",
+            caption:
+              "TMOJI UI flow (text selection → OCR → translation review → image synthesis)",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-system.png",
+            alt: "TMOJI processing pipeline",
+            caption: "Image translation and asynchronous processing pipeline",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "Frontend: Implementing the UX for selecting text regions within images was challenging. I implemented an adjustable rectangular overlay layer and calculated the relationship between image resolution and rendered size to precisely control the selection area.\n\nBackend-AI Integration: The AI model runs as a Python program on an Ubuntu environment. Since the AI server ports were restricted, we decided to send commands through SSH. The backend processes tasks sequentially using an asynchronous queue.\n\nCI/CD: Integrating SSH communication between the backend server and AI server into the CI/CD pipeline was challenging. The deployment pipeline restarts Docker containers via SSM commands after pulling new code. We solved this by transferring SSH keys stored in GitHub Secrets into SSM parameters during deployment.",
+              "Frontend: Implementing the UX for selecting text regions within an image was a challenge. I implemented an adjustable rectangular overlay layer and calculated the relationship between the image resolution and the rendered image size to accurately control the selection area.\n\nBackend-AI integration: The AI model runs as a Python program on an Ubuntu environment. Because direct port access to the AI server was restricted, we decided to execute commands through SSH. The backend processes tasks sequentially using an asynchronous queue.\n\nCI-CD: Integrating SSH communication between the backend and AI server into the CI/CD pipeline was also challenging. The pipeline restarts Docker containers via SSM commands after pulling new code. We solved this by transferring SSH keys stored in GitHub Secrets into SSM parameters during deployment.",
           },
           {
             type: "text",
@@ -418,12 +444,11 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           },
         ],
       },
-
       {
         title: "AI Competition Model Demo Application",
         subtitle: "Deep Learning Model Web Deployment Project",
         description:
-          "A web application that allows users to experience award-winning deep learning models developed in a club AI competition.",
+          "An AI service that allows users to experience award-winning deep learning models from a club AI competition through the web.",
         techStack: [
           "Next.js",
           "Django",
@@ -435,7 +460,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Docker",
           "AWS",
         ],
-        githubUrl: "https://github.com/2024-PNU-SW-StudyGroup/Group-11",
+        githubUrl:
+          "https://github.com/PNU-AID/jiok-camp-server/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.com/camp1",
         image: "/projects/aid-camp1-main.png",
         details: [
@@ -443,46 +469,45 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "This project was part of an internal AI competition. It provides a web service where users can directly experience top-performing deep learning models developed during the competition.\n\nThe competition task was to train a model that predicts review ratings from text. Users can post a review in chat format, and the AI predicts the rating and displays it next to the message.",
+              "This project was conducted as part of an internal AI competition in our club. It provides a web service that allows users to directly experience top-performing deep learning models.\nThe competition task was to train an AI model that predicts star ratings based on review text.\nWhen a user submits a review through the chat interface, the AI predicts the rating and displays it next to the message.",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "I served as the project lead.\n\nThe system was built using Next.js, Django, and PyTorch. My main contributions included UI/UX design, API specification writing, database schema design, and PR review. My role focused on coordinating the overall service architecture rather than simply deploying a model.",
+              "I served as the project lead.\nUsing Next.js, Django, and PyTorch, I focused on UI/UX design, API specification writing, database design, and PR reviews. My role was to coordinate the overall system flow so the model could be delivered as a stable web service rather than just a standalone model.",
           },
           {
             type: "image",
             src: "/projects/aid-camp-system-diagram.png",
-            alt: "system diagram",
-            caption: "Overall system architecture",
+            alt: "AID competition system diagram",
+            caption: "Overall service system diagram",
           },
           {
             type: "image",
             src: "/projects/aid-camp1-main.png",
-            alt: "AI model serving UI",
+            alt: "AI model serving main screen",
             caption: "AI model serving interface",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "Handling asynchronous responses from the AI model was the main challenge. We separated the process into three APIs: (1) input and model execution, (2) checking whether inference is completed, and (3) retrieving the result.\n\nTo prevent overload when multiple requests occur simultaneously, we introduced Celery as an asynchronous task queue so that requests could be processed sequentially.",
+              "Handling asynchronous responses from the AI model was the main challenge. The process was separated into three APIs: (1) input and model execution, (2) checking inference completion, and (3) retrieving the result.\nTo prevent overload from multiple simultaneous requests, we introduced Celery as an asynchronous task queue so requests could be processed sequentially.",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "This project focused not only on the AI model itself but also on delivering it as a practical web service. It provided experience in model serving, API design, database schema design, and collaborative development processes.",
+              "This project focused not only on the AI model itself but also on designing the user experience and server architecture needed to deliver it as a web service. It provided experience in model serving, API design, data structure design, and collaborative development workflows.",
           },
         ],
       },
-
       {
-        title: "AI Competition Management Web Application",
-        subtitle: "Kaggle-style AI Competition SPA",
+        title: "AI Competition Management & Registration Web Application",
+        subtitle: "Kaggle-style AI Competition Management SPA",
         description:
-          "A single-page web application designed to manage registration, submissions, and rankings for an AI competition.",
+          "A single-page web application designed to manage the workflow of an AI competition, including registration, submissions, and rankings.",
         techStack: [
           "Next.js",
           "React",
@@ -492,7 +517,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Docker",
           "AWS",
         ],
-        githubUrl: "https://github.com/PNU-AID/jiok-camp-server",
+        githubUrl:
+          "https://github.com/PNU-AID/jiok-camp-server/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.com/camp2",
         image: "/projects/aid-camp2-main.png",
         details: [
@@ -500,58 +526,69 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "A single-page application designed to operate an internal AI competition in a Kaggle-like format.\n\nThe platform manages the entire workflow including competition registration, result submission, and ranking. Administrators can manage team accounts and submission timelines, while participants can upload results and check rankings.",
+              "A single-page application designed to operate an internal AI competition in a Kaggle-like format.\n\nThe system manages the entire competition workflow including registration, result submissions, and rankings. Administrators can manage team accounts and submission timelines, while participants can upload result sheets, check scores, and view rankings.",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "I was responsible for project leadership, frontend development, and authentication logic.\n\nThe system was built with Next.js and PostgreSQL, and Auth.js was used to implement authentication. I also developed custom modal components with TypeScript and created typed API hooks to reduce errors and improve development speed.",
+              "I was responsible for project leadership, frontend development, and authentication logic.\n\nThe application was developed using Next.js and PostgreSQL, and Auth.js was used to design the authentication system. I also implemented custom modal components with TypeScript and developed typed API hooks to reduce errors and improve development efficiency.",
           },
           {
             type: "image",
             src: "/projects/aid-camp-system-diagram.png",
-            alt: "system structure",
+            alt: "Competition management system structure",
             caption: "Competition management service architecture",
           },
           {
             type: "image",
             src: "/projects/aid-camp-network.png",
-            alt: "network mapping",
-            caption: "Network architecture",
+            alt: "Competition service network structure",
+            caption: "Network mapping",
           },
           {
             type: "image",
             src: "/projects/aid-camp-cicd.png",
-            alt: "CI CD",
-            caption: "CI/CD pipeline",
+            alt: "Competition service CI CD",
+            caption: "CI / CD architecture",
           },
           {
             type: "image",
             src: "/projects/aid-camp2-main.png",
-            alt: "application UI",
-            caption: "Competition management application",
+            alt: "Competition registration application screen",
+            caption: "Competition management main screen",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-camp2-admin.png",
+            alt: "Competition admin screen",
+            caption: "Competition management admin screen",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-camp2-team.png",
+            alt: "Competition team interface",
+            caption: "Competition participant interface",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "Integrating this service with the AI model demo service required connecting multiple backend servers under one domain. Instead of merging them into a single project, we separated them using subdomains and mapped them through an AWS ELB.\n\nLater, considering the relatively low traffic, we migrated from ELB to an nginx-based routing system to reduce operational costs.",
+              "While integrating this service with the AI model demo service, managing multiple backend servers under a single domain became a challenge. Instead of merging them into a single project, we separated them into subdomains and mapped ports through an AWS ELB.\nLater, considering the relatively low traffic of the service, we migrated from ELB to an nginx-based configuration to reduce operational costs.",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "This project focused on practical service operation including authentication flows, submission workflows, UI interactions, and type safety. It also included real deployment using Docker and AWS.",
+              "This project focused on real service operation aspects such as authentication flows, submission workflows, UI interactions, and type safety. It also included deployment using Docker and AWS to create a production-ready structure.",
           },
         ],
       },
-
       {
         title: "AID Club Homepage",
-        subtitle: "GitHub Pages Based Club Website",
+        subtitle: "GitHub Pages Based Club Introduction Website",
         description:
-          "A club introduction website designed to minimize operating costs without running a backend server.",
+          "A club introduction website designed to minimize operational costs by running without a backend server.",
         techStack: [
           "Next.js",
           "React",
@@ -560,48 +597,47 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Notion API",
           "GitHub Actions",
         ],
-        githubUrl: "https://github.com/PNU-AID/homepage",
+        githubUrl: "https://github.com/PNU-AID/homepage/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.github.io/homepage/",
-        image: "/projects/aid-homepage-main.png",
+        image: "/projects/aid-homepage-main-thumbnail.png",
         details: [
           {
             type: "text",
             title: "Overview",
             content:
-              "A website created to introduce AID, an AI club in the Department of Computer Engineering at Pusan National University.\n\nThe system was designed to provide club information, activity records, and member introductions while minimizing operational costs.",
+              "A website created to introduce AID, the AI club of the School of Computer Science at Pusan National University.\n\nThe site was designed to deliver information such as club introduction, activity records, and member details while minimizing server operation costs.",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "I designed a frontend-centered architecture without running a backend server and hosted the site using GitHub Pages.\n\nThe data source uses the Notion API so that the website can function without a dedicated database server.",
+              "I designed a frontend-centered architecture without a backend server and hosted it using GitHub Pages.\nThe site uses the Notion API as its data source so that it can operate without a dedicated database server.",
           },
           {
             type: "image",
             src: "/projects/aid-homepage-main.png",
-            alt: "homepage UI",
-            caption: "AID club homepage",
+            alt: "AID club homepage main screen",
+            caption: "AID club homepage main screen",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "When using the Notion API in a deployed frontend environment, CORS errors occurred, which normally require a backend proxy server.\n\nTo solve this without additional cost, I created a GitHub Actions workflow that fetches data from the Notion API once per day and updates the repository's static data files before redeploying the site.",
+              "Using the Notion API in a deployed frontend environment caused CORS errors, which would normally require a backend or proxy server.\nTo avoid additional infrastructure costs, I implemented a GitHub Actions workflow that updates static data files from the Notion API once per day and redeploys the site automatically.",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "This project focused not only on UI implementation but also on cost reduction and operational convenience. It includes experience with static hosting, external API integration, CORS workarounds, and automation.",
+              "The key focus of this project was not only building the UI but also considering cost reduction and operational convenience. It includes experience with static hosting, external API integration, CORS workarounds, and automation.",
           },
         ],
       },
-
       {
         title: "DongariMart",
-        subtitle: "University Club Recruitment Web Service",
+        subtitle: "University Club Registration & Recruitment Web Service",
         description:
-          "A web service designed to help students easily explore and apply to university clubs.",
+          "A web project designed to help students easily explore and apply to university clubs.",
         techStack: [
           "Next.js",
           "React",
@@ -625,37 +661,37 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "What I Did",
             content:
-              "I served as both a full-stack developer and project leader.\n\nI designed the UI using Figma and implemented the frontend using Next.js and React. I also designed the backend structure using Prisma, Next.js API routes, and NextAuth, collaborating closely with the backend developer.\n\nThis project provided experience with GitHub collaboration, GitHub Actions CI pipelines, and AWS deployment.",
+              "I served as both a full-stack developer and project leader.\n\nI designed the UI using Figma and implemented the frontend using Next.js and React. I also designed the backend structure using Prisma, Next.js API routes, and NextAuth while collaborating with the backend developer.\n\nThrough this project, I gained experience with GitHub collaboration, GitHub Actions CI pipelines, and AWS deployment.",
           },
           {
             type: "image",
             src: "/projects/dongarimart-architecture.png",
-            alt: "architecture",
-            caption: "Service architecture",
+            alt: "DongariMart architecture",
+            caption: "DongariMart service architecture",
           },
           {
             type: "image",
             src: "/projects/dongarimart-main.png",
-            alt: "main UI",
-            caption: "Main interface",
+            alt: "DongariMart main screen",
+            caption: "DongariMart main screen",
           },
           {
             type: "image",
             src: "/projects/dongarimart-list.png",
-            alt: "club list",
+            alt: "DongariMart club list",
             caption: "Club browsing interface",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "This was my first full web application project. Implementing responsive UI for mobile environments helped me learn CSS behavior in practice.\n\nInitially, each page was implemented independently, but later I realized the importance of modularizing reusable components, which influenced how I structure projects afterwards.",
+              "This was my first full web application project. While implementing responsive UI for mobile environments, I learned about the behavior of CSS properties in practice.\nAdditionally, I initially developed each page independently, but later realized the importance of modularizing reusable components, which influenced how I structure projects today.",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "Rather than a simple community project, this service was designed with real users in mind, focusing on information discovery and application workflows.\n\nIt provided hands-on experience across design, frontend development, authentication, API integration, and deployment.",
+              "Rather than a simple campus community project, the service was designed with real users in mind, focusing on information discovery and application workflows.\n\nIt provided experience across design, frontend implementation, authentication, API integration, and deployment.",
           },
         ],
       },
@@ -664,13 +700,13 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
   ja: {
     title: "ポートフォリオ",
     description:
-      "主要なプロジェクトをカード形式で整理しています。各カードをクリックすると、詳細な説明と画像を確認できます。",
+      "主要なプロジェクトをカード形式で整理しており、各カードをクリックすると詳細内容と画像をあわせて確認できます。",
     projects: [
       {
         title: "TMOJI",
         subtitle: "フォントスタイルを維持する画像翻訳AIサービス",
         description:
-          "画像内のテキストを翻訳しながら、元画像のフォント、色、レイアウトをできる限り自然に維持することを目指した卒業研究プロジェクトです。",
+          "画像内のテキストを翻訳しながら、元画像のフォント、色、レイアウトをできる限り自然に維持するよう設計した卒業研究プロジェクトです。",
         techStack: [
           "React",
           "TypeScript",
@@ -686,7 +722,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "CloudFront",
         ],
         githubUrl:
-          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10",
+          "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/blob/main/README-EN.md",
         demoUrl: "https://tmoji.org/",
         image:
           "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/banner.png",
@@ -695,37 +731,44 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "既存の画像翻訳サービスでは、翻訳後のテキストが元画像のフォント、色、配置と自然に調和せず、視覚的な違和感が生じるという課題がありました。\n\n本プロジェクトは、単なるOCRと機械翻訳にとどまらず、翻訳後のテキストを元画像のスタイルに合わせて自然に再合成することを目標とした卒業研究です。",
+              "既存の画像翻訳サービスでは、翻訳後のテキストが元画像のフォント、色、配置と自然に調和せず、視覚的な違和感が生じるという問題がありました。\n\nこのプロジェクトは、単なるOCR＋機械翻訳のレベルを超えて、翻訳後のテキストを元画像のスタイルに合わせて自然に再合成することを目標とした卒業研究です。",
           },
           {
             type: "text",
             title: "What I Built",
             content:
-              "私は主にサービス開発部分を担当しました。\n\nフロントエンドはVite、React、TypeScriptで実装し、ビルド成果物はAWS CloudFrontを通じて配信しました。バックエンドはPythonとFastAPIを用いたREST APIとして構築し、データ管理にはPostgreSQLとRedisを使用しました。また、各サービスをDockerでコンテナ化し、AWS EC2環境へデプロイしました。\n\nAIモデルは別サーバーで動作する構成とし、バックエンドがこれを呼び出して処理を管理するように設計しました。高負荷時でも安定して処理できるよう、CeleryとRedisを用いた非同期分散処理構造を設計しました。",
+              "私は主にサービス開発部分を担当しました。\n\nフロントエンドはVite + React + TypeScriptで実装し、ビルド成果物はAWS CloudFrontを通じて配信しました。バックエンドはPythonとFastAPIベースのREST APIとして構成し、RDBMSとRedisを使ってデータを管理しました。また、各サービスをDockerでコンテナ化し、AWS EC2環境へデプロイしました。\n\nAIモデルは別サーバーで動作するよう分離し、バックエンドサーバーがそれを呼び出して処理を管理する構成にしました。高負荷の状況でも安定して処理できるよう、CeleryとRedisを用いた非同期分散処理構造を設計しました。",
           },
           {
             type: "text",
             title: "AI / System Point",
             content:
-              "OCRベースの文字認識に加えて、拡散モデルベースのTextCtrlを活用し、文字スタイルやグリフを学習させることで、翻訳後のテキストを自然に画像へ再合成できるようにしました。\n\nまた、英語・日本語・韓国語に対応するため、多言語フォントを用いてモデルを再学習しました。実運用可能なサービスを目指し、フロントエンド、バックエンド、AIモデルサーバーを分離したシステム構成を採用しました。さらに、nginxを用いてルーティングおよびポート接続構成を設計し、実際の運用を意識したインフラ構成も経験しました。",
+              "OCRベースの文字認識に加え、拡散モデルベースのTextCtrlを活用して文字スタイルやグリフを学習し、翻訳後のテキストを自然に画像へ合成できるようにしました。\n\nまた、英語・日本語・韓国語に対応できるよう、多言語フォントを用いてモデルを再学習しました。実運用可能なサービス形態を目指し、フロントエンド、バックエンド、AIモデルサーバーを分離したシステムを構成しました。さらに、nginxを利用してルーティングやポート接続構造も設計し、実際の運用を考慮したインフラ構成を経験しました。",
           },
           {
             type: "image",
             src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/sample.gif",
-            alt: "TMOJIメイン画面",
-            caption: "TMOJIメイン画面",
+            alt: "TMOJIデモ動画",
+            caption: "TMOJIデモ動画",
           },
           {
             type: "image",
-            src: "https://github.com/pnucse-capstone2025/Capstone-2025-team-10/raw/main/img/system.png",
-            alt: "TMOJI処理フロー",
-            caption: "画像翻訳および非同期処理フロー",
+            src: "/projects/tmoji-flow.png",
+            alt: "TMOJI画面フロー（テキスト指定 → OCR → 翻訳確認 → 画像合成）",
+            caption:
+              "TMOJI画面フロー（テキスト指定 → OCR → 翻訳確認 → 画像合成）",
+          },
+          {
+            type: "image",
+            src: "/projects/tmoji-system.png",
+            alt: "TMOJIシステム構成",
+            caption: "TMOJIシステム構成",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "フロントエンド：画像内の翻訳したいテキスト領域を指定するためのUX実装が課題でした。画像上に調整可能な矩形レイヤーを重ね、画像の解像度と画面上での表示サイズを計算することで、選択領域を正確に制御できるよう設計しました。\n\nバックエンドとAIサーバーの連携：AIサーバー上のモデルはUbuntu環境のPythonプログラムとして動作していました。これをバックエンドの呼び出しに応じて推論結果を返す方式にする必要がありましたが、AIサーバーのポート公開に制限があったため、SSH接続で直接コマンドを実行する方式を採用しました。バックエンド側では非同期キューを通じて順次処理する形で実装しました。\n\nCI/CD：EC2上にデプロイされたバックエンドサーバーとAIサーバー間のSSH通信をCI/CDパイプラインにも組み込む必要があり、課題となりました。パイプラインの末尾では、新たにPullしたファイルをもとにSSMコマンドでDockerを再起動する工程が含まれていたため、その段階でGitHub Secretsに保存したSSHキーやコマンドをSSM Parameterへ移し、ファイルとして保存する処理を追加して対応しました。",
+              "フロントエンド：画像内の翻訳したいテキスト領域を指定するためのUX実装が課題でした。画像の上に選択領域を矩形として調整できるレイヤーを追加し、画像の解像度と画像要素の画面上のサイズを計算して、矩形領域を正確に調整できるよう設計しました。\n\nバックエンド-AIサーバー連携：AIサーバーのAIモデルはUbuntu環境上のPythonプログラムとして動作していました。これをバックエンドサーバーからの呼び出しに応じて推論結果を返す方式にする必要がありましたが、AIサーバーのポート開放に制限があったため、SSH接続で直接コマンドを実行する方式を採用しました。バックエンドサーバー側では、非同期キューを通じて順次処理する形で実装しました。\n\nCI-CD：EC2環境にデプロイされたバックエンドサーバーとAIサーバー間のSSH通信を、CI-CDパイプラインにも適用する必要がありました。パイプラインの最後には、新しくpullされたファイルをもとにSSMコマンドでDockerを再起動する工程が含まれていたため、その段階でGitHub Secretsに保存したSSHキーとコマンドをSSM Parameterへ移し、ファイルとして保存する処理を追加することで解決しました。",
           },
           {
             type: "text",
@@ -736,8 +779,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
-        title: "サークルAI大会 優秀作デモアプリケーション",
-        subtitle: "ディープラーニングモデルのWebデプロイプロジェクト",
+        title: "サークルAI大会優秀作デモアプリケーション",
+        subtitle: "ディープラーニングモデルWebデプロイプロジェクト",
         description:
           "サークルで開催されたAI大会の優秀なディープラーニングモデルを、Web上で体験できるようにしたAIサービスプロジェクトです。",
         techStack: [
@@ -751,7 +794,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Docker",
           "AWS",
         ],
-        githubUrl: "https://github.com/2024-PNU-SW-StudyGroup/Group-11",
+        githubUrl:
+          "https://github.com/PNU-AID/jiok-camp-server/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.com/camp1",
         image: "/projects/aid-camp1-main.png",
         details: [
@@ -759,45 +803,45 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "サークル内AI大会の一環として行ったプロジェクトであり、大会で高評価を得たディープラーニングモデルをWeb上で公開し、ユーザーが直接体験できるようにしたAIサービスです。\n\nこの大会のテーマは、レビュー文を学習し、テキストから星評価を予測するAIを実装することでした。特定店舗に対するレビューをチャット形式で入力すると、AIが内容をもとに評価を推論し、チャット横に表示されるように設計しました。",
+              "サークル内AI大会の一部として行ったプロジェクトであり、大会の優秀なディープラーニングモデルをWeb上で公開し、ユーザーが直接体験できるようにしたAI Webサービスです。\nこの大会のテーマは、レビューのデータを学習し、レビュー文を読んで星評価を予測するAIを実装することでした。\n特定の店舗に対するレビューをチャット形式で投稿すると、ユーザーが付けるであろう評価をAIが推論し、チャットの横に表示するよう設計したプロジェクトです。",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "私はプロジェクト全体の統括を担当しました。\n\nNext.js、Django、PyTorchを使用し、特にUI/UX設計、API仕様書の作成、DB設計、PRレビューに重点的に関わりました。単なるモデル公開ではなく、Webサービスとして安定的に連携する全体構成を調整する役割を担いました。",
+              "Next.js、Django、PyTorchを使用し、プロジェクト全体の統括を担当しました。\n特にUI/UX設計、API仕様書の作成、DB設計、PRレビューに重点的に参加しました。単なるモデル配布ではなく、Webサービスとして安定的に連携するよう全体の流れを調整する役割を担いました。",
           },
           {
             type: "image",
             src: "/projects/aid-camp-system-diagram.png",
-            alt: "システムダイアグラム",
-            caption: "サービス全体のシステム構成図",
+            alt: "AID地獄キャンプのシステムダイアグラム",
+            caption: "サービス全体のシステムダイアグラム",
           },
           {
             type: "image",
             src: "/projects/aid-camp1-main.png",
-            alt: "AIモデル提供画面",
-            caption: "AIモデル提供サービス画面",
+            alt: "AI model servingメイン画面",
+            caption: "AI model servingサービス画面",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "チャット投稿後、モデルの応答までを待機させる非同期処理の実装が課題でした。バックエンドでテキスト入力を受けてからAIの推論結果を返す流れを、①入力受付とモデル起動、②推論完了確認、③結果取得、の3つのAPIに分けて設計しました。\n\nまた、同時に複数のリクエストが入った際の過負荷も課題であり、これに対してCeleryを導入し、リクエストを順次処理できるように設計しました。",
+              "チャットを投稿した後、モデルの応答まで待機させる非同期処理を実装することが課題でした。バックエンドでテキスト入力を受けた後、AIの推論結果を返す流れを、1. 入力受付およびモデル起動、2. モデル演算完了の確認、3. 結果値の取得、の3つのAPIに分けて設計しました。また、同時に複数のリクエストが入った際の過負荷を防ぐことも課題であり、これに対して非同期キュー分散ライブラリであるCeleryを導入し、同時に入ってきたリクエストを順次処理するよう設計しました。",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "AIモデル自体だけでなく、それをWebサービスとして届けるためのユーザー体験とサーバー構成をあわせて検討したプロジェクトでした。モデルサービング、API設計、データ構造設計、協業レビューのプロセスまで経験できた点に大きな意味がありました。",
+              "AIモデルそのものだけでなく、それをWebサービスとして提供するためのユーザー体験とサーバー構造をあわせて検討したプロジェクトでした。\nモデルサービング、API設計、データ構造設計、協業レビューのプロセスまで経験できた点に大きな意味がありました。",
           },
         ],
       },
       {
-        title: "サークルAI大会 運営・受付Webアプリケーション",
-        subtitle: "Kaggle風AI大会運営SPA",
+        title: "サークルAI大会運営・受付Webアプリケーション",
+        subtitle: "KaggleスタイルAI大会運営SPA",
         description:
-          "AI大会の進行、参加受付、提出フローをWeb上で管理できるようにしたシングルページアプリケーションです。",
+          "AI大会の進行、受付、提出フローをWeb上で管理できるようにしたシングルページアプリケーションです。",
         techStack: [
           "Next.js",
           "React",
@@ -807,7 +851,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Docker",
           "AWS",
         ],
-        githubUrl: "https://github.com/PNU-AID/jiok-camp-server",
+        githubUrl:
+          "https://github.com/PNU-AID/jiok-camp-server/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.com/camp2",
         image: "/projects/aid-camp2-main.png",
         details: [
@@ -815,19 +860,19 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "サークル内AI大会をKaggleのような形式で運営できるように開発したシングルページアプリケーションです。\n\n大会進行、参加受付、結果提出などの運営フローをWeb上で処理できるよう構成しました。管理者は各チームの提出タイムラインやチームアカウントを管理でき、参加チームは結果シートの提出、スコア確認、ランキング確認ができるよう設計しました。",
+              "サークル内AI大会をKaggleのような方式で運営できるように開発したシングルページアプリケーションです。\n\n大会の進行、参加受付、結果提出などの運営フローをWeb上で処理できるように構成しました。\n管理者は各チームの提出タイムラインやチームアカウントを管理でき、参加チームは結果sheetの提出、点数確認、ランキング確認ができます。",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "私は統括、フロントエンド、認証ロジックを担当しました。\n\nNext.jsとPostgreSQLを用いて開発し、Auth.jsを活用してログイン構造を設計しました。また、TypeScriptを用いてカスタムモーダルを実装し、型定義されたAPI hooksを開発することで、タイポや実装ミスを減らしながら効率的に開発できるようにしました。",
+              "統括、フロントエンド、認証ロジックを担当しました。\n\nNext.jsとPostgreSQLを用いて開発し、Auth.jsを活用してログイン構造を設計しました。また、TypeScriptを通じてカスタムモーダルを実装し、型定義されたAPI hooksを開発することで、タイプミスや実装ミスを減らしながら迅速に開発できるようにしました。",
           },
           {
             type: "image",
             src: "/projects/aid-camp-system-diagram.png",
-            alt: "大会運営Web構成",
-            caption: "大会運営サービスのWeb構成",
+            alt: "大会運営Web構造",
+            caption: "大会運営サービスWeb構造",
           },
           {
             type: "image",
@@ -838,26 +883,38 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           {
             type: "image",
             src: "/projects/aid-camp-cicd.png",
-            alt: "大会運営サービスのCI/CD",
+            alt: "大会運営サービスCI CD",
             caption: "CI / CD構成",
           },
           {
             type: "image",
             src: "/projects/aid-camp2-main.png",
-            alt: "大会運営アプリケーション画面",
-            caption: "大会運営・受付アプリケーションのメイン画面",
+            alt: "大会進行受付アプリケーション画面",
+            caption: "大会進行・受付アプリケーションメイン画面",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-camp2-admin.png",
+            alt: "大会進行受付アプリケーション管理者画面",
+            caption: "大会進行・受付アプリケーション管理者画面",
+          },
+          {
+            type: "image",
+            src: "/projects/aid-camp2-team.png",
+            alt: "大会進行受付アプリケーション参加チーム画面",
+            caption: "大会進行・受付アプリケーション参加チーム画面",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "このサービスを優秀AIモデルのデモサービスと統合する過程で、異なるバックエンドサーバーを1つのドメイン配下で運用することが課題となりました。単一プロジェクトへ統合するのではなく、同一DNS上でサブドメインを分け、ELBによるポート別マッピングで対応できるよう設計しました。\n\nその後、アクセス量が多くないサービスである点を考慮し、ELB運用コストを削減するためにnginxベースの構成へ移行しました。",
+              "このサービスを大会の優秀AIモデルデモサービスと統合する過程で、異なるバックエンドサーバーを1つのドメインに統合することが課題となりました。同じプロジェクトとして統合するのではなく、同じDNSサーバー上でサブドメインを分け、それをELBでポートごとにマッピングする方式で解決できるよう設計しました。\nその後、アクセス数が多くないサービスであることを考慮し、ELBで発生するコストを削減するため、Nginxへ置き換えてマイグレーションしました。",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "認証、提出フロー、UIインタラクション、型安全性など、サービス運営の観点を含めて設計したプロジェクトでした。単なる機能実装にとどまらず、DockerとAWSを活用した実運用可能な構成までつなげた点が強みです。",
+              "サービス運用の観点から、認証、提出フロー、UIインタラクション、型安全性をあわせて考慮したプロジェクトでした。単なる機能実装を超えて、実際に運用可能な構造を作るためにDockerとAWSベースのデプロイまでつなげた点が強みです。",
           },
         ],
       },
@@ -865,7 +922,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         title: "AIDサークルホームページ",
         subtitle: "GitHub Pagesベースのサークル紹介Webサイト",
         description:
-          "バックエンドサーバーを運用せず、運営コストを抑えながら制作したサークル紹介サイトです。",
+          "バックエンドサーバーなしで運用コストを抑えながら制作したサークル紹介用Webサイトです。",
         techStack: [
           "Next.js",
           "React",
@@ -874,39 +931,39 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           "Notion API",
           "GitHub Actions",
         ],
-        githubUrl: "https://github.com/PNU-AID/homepage",
+        githubUrl: "https://github.com/PNU-AID/homepage/blob/main/README-EN.md",
         demoUrl: "https://pnu-aid.github.io/homepage/",
-        image: "/projects/aid-homepage-main.png",
+        image: "/projects/aid-homepage-main-thumbnail.png",
         details: [
           {
             type: "text",
             title: "Overview",
             content:
-              "釜山大学 情報コンピュータ工学部のAIサークル、AIDを紹介するために制作したホームページプロジェクトです。\n\nサークル紹介、活動記録、メンバー案内など必要な情報を伝えつつ、サーバー運用コストを最小限に抑える方針で設計しました。",
+              "釜山大学情報コンピューター工学部のAIサークル、AIDを紹介するためのホームページプロジェクトです。\n\nサークル紹介、活動記録、構成員案内など必要な情報を伝えつつ、サーバー運用コストを最小化する方向で設計しました。",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "バックエンドサーバーを置かず、最小限の機能でフロントエンド中心の構成を設計し、GitHub Pagesで静的ホスティングしました。\n\nデータ保存先にはNotion APIを利用し、専用のデータベースサーバーなしで運用できるよう実装しました。",
+              "バックエンドサーバーを置かず、最小限の機能だけでフロントエンド中心の構成を設計し、GitHub Pagesを通じて静的ホスティングしました。\nデータ保存先としてはNotion APIを使用し、別途データベースサーバーなしで動作するよう実装しました。",
           },
           {
             type: "image",
             src: "/projects/aid-homepage-main.png",
-            alt: "AIDサークルホームページ画面",
-            caption: "AIDサークルホームページのメイン画面",
+            alt: "AIDサークルホームページメイン画面",
+            caption: "AIDサークルホームページメイン画面",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "デプロイ済みのフロントエンド環境からNotion APIを利用する際、CORSエラーが発生し、通常であればバックエンドまたはプロキシサーバーが必要になるという課題がありました。\n\nこれを追加コストなしで解決するため、GitHub Actionsを利用して毎日1回Notion APIからリポジトリ内の静的データファイルを更新し、自動的に再デプロイする仕組みを設計しました。",
+              "Notion APIをデプロイされたフロントエンド環境で使用する際、CORSエラーが発生し、バックエンドサーバーまたはプロキシサーバーが必要になるという問題がありました。これを解決するために、Github Actionsを利用して毎日1回Notion APIを通じてリポジトリの静的データファイルを更新し、再デプロイするよう設計することで、別途費用をかけずに回避できました。",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "単に画面を作るだけではなく、コスト削減と運用のしやすさまで考慮した点が重要でした。静的サイトホスティング、外部API活用、CORS回避、運用自動化の経験を含むプロジェクトです。",
+              "単に画面を作るだけで終わらず、コスト削減と運用のしやすさまで考慮した点が重要でした。\n静的サイトホスティング、外部API活用、CORS回避、運用自動化の経験を含むプロジェクトです。",
           },
         ],
       },
@@ -914,7 +971,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         title: "ドンアリマート",
         subtitle: "大学サークル登録・募集Webサービス",
         description:
-          "大学内のサークル情報を簡単に探し、応募できるように制作したWebプロジェクトです。",
+          "大学のサークル情報を簡単に探して応募できるように制作したWebプロジェクトです。",
         techStack: [
           "Next.js",
           "React",
@@ -932,43 +989,43 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
             type: "text",
             title: "Overview",
             content:
-              "開発に関心のある同期3名とともに、大学内のサークルを登録し、部員募集ができるWebサービスを開発しました。\n\n一般学生は大学公式サイトでは探しにくいサークル情報を簡単に確認して応募でき、サークル運営側は広報や募集公告の掲載を手軽に行えるよう設計しました。",
+              "開発に関心のある同期3人と一緒に、大学のサークルを登録し、部員を募集できるWebサービスを開発しました。\n\n一般学生は釜山大学のホームページでは見つけにくいサークル情報を簡単に確認して応募でき、サークル関係者は広報や募集告知の登録を手軽に行えるよう設計しました。",
           },
           {
             type: "text",
             title: "What I Did",
             content:
-              "私はフルスタック開発およびプロジェクトリーダーを担当しました。\n\nFigmaでWebページを設計し、Next.jsベースのReactフロントエンドを実装しました。また、Prisma、Next.js API、NextAuthを活用したバックエンド構成を考案し、バックエンド担当者と協力して実装を進めました。\n\nこの過程で、GitHubを用いたチーム開発、GitHub Actionsによるビルド自動化、AWSへのデプロイを経験しました。",
+              "プロジェクトではFull-stackおよびプロジェクトリーダーの役割を担当しました。\n\n自らFigmaでWebページを設計し、Next.jsベースのReactフロントエンドを実装しました。また、Prisma、Next.js API、NextAuthを活用したバックエンド構造を構想し、バックエンド担当者と協力して実装を進めました。\n\nこの過程で、GitHubでの協業、GitHub Actionsを活用したビルド自動化、AWSデプロイの経験を積みました。",
           },
           {
             type: "image",
             src: "/projects/dongarimart-architecture.png",
             alt: "ドンアリマートアーキテクチャ",
-            caption: "ドンアリマートのサービスアーキテクチャ",
+            caption: "ドンアリマートサービスアーキテクチャ",
           },
           {
             type: "image",
             src: "/projects/dongarimart-main.png",
             alt: "ドンアリマートメイン画面",
-            caption: "ドンアリマートのメイン画面",
+            caption: "ドンアリマートメイン画面",
           },
           {
             type: "image",
             src: "/projects/dongarimart-list.png",
             alt: "ドンアリマート一覧画面",
-            caption: "サークル一覧・探索画面",
+            caption: "サークル探索および一覧画面",
           },
           {
             type: "text",
             title: "Challenges & Solutions",
             content:
-              "このプロジェクトは、私が初めて本格的に取り組んだWebアプリケーション開発でした。モバイル環境などを意識したレスポンシブUIを直接実装する中で、CSSプロパティの特性を実践的に学ぶことができました。\n\nまた、当初は各ページごとに個別にコードを書いていましたが、開発を進める中で繰り返し使うコンポーネントのモジュール化の必要性を実感し、その後の開発では再利用性を意識して設計するようになりました。",
+              "Webアプリケーション開発に初めて本格的に取り組んだプロジェクトでした。モバイル環境などに対応するレスポンシブUIを直接実装しながら、CSSプロパティの特性について実践的に学ぶことができました。また、当初は各ページごとにコードを新しく書いて開発していましたが、その後、繰り返し使われるコンポーネントをモジュール化する必要性を実感し、モジュール化を意識して開発するきっかけになりました。",
           },
           {
             type: "text",
             title: "Points",
             content:
-              "単なる学内コミュニティ向けのプロジェクトではなく、実際の利用者を想定し、情報探索と応募フローを意識して設計した点が強みでした。\n\n特に、デザイン、フロントエンド実装、認証・API連携の理解、デプロイまで幅広く経験できたプロジェクトです。",
+              "単なる学内コミュニティ向けプロジェクトではなく、実際の利用者を基準に情報探索と応募フローを考慮して設計した点が強みでした。\n\n特に、デザイン、フロントエンド実装、認証およびAPI連携構造の理解、デプロイ経験まで幅広く経験できたプロジェクトです。",
           },
         ],
       },

@@ -24,7 +24,7 @@ export default async function PortfolioPage({
   const nav = resumeContent[currentLang].nav;
 
   return (
-    <main className="min-h-screen bg-slate-50 py-10 text-slate-900">
+    <main className="min-h-screen bg-slate-50 py-10 text-slate-900 print:bg-white print:py-0">
       <Container>
         <header className="mb-8 rounded-4xl border border-slate-200 bg-white p-8 shadow-soft print:rounded-none print:border print:p-5 print:shadow-none">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
@@ -35,7 +35,7 @@ export default async function PortfolioPage({
               <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-950">
                 {content.title}
               </h1>
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600 no-print">
                 {content.description}
               </p>
               <div className="mt-5 no-print">

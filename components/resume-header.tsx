@@ -38,9 +38,17 @@ export function ResumeHeader({
             href={content.hero.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-block rounded-full font-medium bg-black px-4 py-2 text-sm text-white underline underline-offset-4"
+            className="inline-block rounded-full font-medium bg-black px-4 py-2 text-sm text-white underline underline-offset-4 no-print"
           >
             GitHub
+          </a>
+          <a
+            href={content.hero.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block font-medium py-2 text-sm text-black underline underline-offset-4 print-only"
+          >
+            GitHub: {content.hero.github}
           </a>
           <div className="no-print">
             <Link

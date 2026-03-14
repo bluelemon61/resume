@@ -10,7 +10,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <article className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft transition">
+    <article className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft transition print:rounded-none print:border print:p-5 print:shadow-none">
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
@@ -41,7 +41,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
               <p className="mt-1 text-sm text-slate-500">{project.subtitle}</p>
             </div>
             <span
-              className={`mt-1 shrink-0 rounded-full bg-slate-100 p-2 text-slate-600 transition ${
+              className={`mt-1 shrink-0 rounded-full bg-slate-100 p-2 text-slate-600 transition no-print ${
                 open ? "rotate-180" : ""
               }`}
             >
@@ -70,21 +70,31 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
         <div className="border-t border-slate-200 px-6 py-6">
           <div className="mb-5 flex flex-wrap gap-3 text-sm font-medium">
             {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full bg-black px-4 py-2 text-white"
-              >
-                GitHub
-              </a>
+              <>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-black px-4 py-2 text-white no-print"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="print-only"
+                >
+                  GitHub: {project.githubUrl}
+                </a>
+              </>
             )}
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-slate-300 px-4 py-2 text-slate-800"
+                className="rounded-full border border-slate-300 px-4 py-2 text-slate-800 no-print"
               >
                 Link
               </a>
