@@ -31,9 +31,6 @@ export function ResumeHeader({
             <LanguageSwitcher currentLang={lang} />
           </div>
           <p>{content.hero.email}</p>
-          <p>{content.hero.phone}</p>
-          <p>{content.hero.birth}</p>
-          <p>{content.hero.address}</p>
           <a
             href={content.hero.github}
             target="_blank"

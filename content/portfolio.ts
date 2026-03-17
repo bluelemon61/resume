@@ -968,7 +968,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
-        title: "ドンアリマート",
+        title: "サークルマート",
         subtitle: "大学サークル登録・募集Webサービス",
         description:
           "大学のサークル情報を簡単に探して応募できるように制作したWebプロジェクトです。",
@@ -1000,19 +1000,19 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
           {
             type: "image",
             src: "/projects/dongarimart-architecture.png",
-            alt: "ドンアリマートアーキテクチャ",
-            caption: "ドンアリマートサービスアーキテクチャ",
+            alt: "サークルマートアーキテクチャ",
+            caption: "サークルマートサービスアーキテクチャ",
           },
           {
             type: "image",
             src: "/projects/dongarimart-main.png",
-            alt: "ドンアリマートメイン画面",
-            caption: "ドンアリマートメイン画面",
+            alt: "サークルマートメイン画面",
+            caption: "サークルマートメイン画面",
           },
           {
             type: "image",
             src: "/projects/dongarimart-list.png",
-            alt: "ドンアリマート一覧画面",
+            alt: "サークルマート一覧画面",
             caption: "サークル探索および一覧画面",
           },
           {

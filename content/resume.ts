@@ -10,10 +10,7 @@ export type ResumeContent = {
     role: string;
     summary: string;
     email: string;
-    phone: string;
-    address: string;
     github: string;
-    birth: string;
   };
   sectionTitles: {
     education: string;
@@ -62,10 +59,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       summary:
         "웹 애플리케이션 개발과 인프라 영역에 관심이 있는 개발자입니다. React, Next.js, TypeScript 기반의 프론트엔드와 FastAPI 기반 백엔드 경험을 가지고 있으며, AI 프로젝트와 해커톤 경험도 보유하고 있습니다.",
       email: "ldh7588@gmail.com",
-      phone: "010-5516-2468",
-      address: "한국",
       github: "https://github.com/bluelemon61",
-      birth: "2001.03.30",
     },
     sectionTitles: {
       education: "학력",
@@ -155,10 +149,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       summary:
         "I am a developer interested in web application development and infrastructure. I have experience building frontend applications with React, Next.js, and TypeScript, as well as backend services using FastAPI. I have also participated in AI projects and hackathons.",
       email: "ldh7588@gmail.com",
-      phone: "+82 10-5516-2468",
-      address: "South Korea",
       github: "https://github.com/bluelemon61",
-      birth: "2001.03.30",
     },
     sectionTitles: {
       education: "Education",
@@ -250,10 +241,7 @@ export const resumeContent: Record<Lang, ResumeContent> = {
       summary:
         "Webアプリケーション開発とインフラ領域に関心を持つエンジニアです。React、Next.js、TypeScriptを用いたフロントエンド開発と、FastAPIを用いたバックエンド開発の経験があります。また、AIプロジェクトやハッカソンへの参加経験もあります。",
       email: "ldh7588@gmail.com",
-      phone: "070-5570-4066",
-      address: "韓国",
       github: "https://github.com/bluelemon61",
-      birth: "2001.03.30",
     },
     sectionTitles: {
       education: "学歴",
