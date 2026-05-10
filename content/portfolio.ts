@@ -14,6 +14,8 @@ export type PortfolioDetailBlock =
     };
 
 export type PortfolioProject = {
+  slug: string;
+  hashAliases?: string[];
   title: string;
   subtitle: string;
   description: string;
@@ -37,6 +39,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
       "주요 프로젝트를 카드 형태로 정리했으며, 각 카드를 클릭하면 상세 내용과 이미지를 함께 확인할 수 있습니다.",
     projects: [
       {
+        slug: "tmoji",
         title: "TMOJI",
         subtitle: "폰트 스타일을 유지하는 이미지 번역 AI 서비스",
         description:
@@ -113,6 +116,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "ai-model-serving",
         title: "동아리 AI대회 우수작 시연 애플리케이션",
         subtitle: "딥러닝 모델 웹 배포 프로젝트",
         description:
@@ -171,6 +175,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "competition-app",
         title: "동아리 AI대회 진행 · 접수 웹 애플리케이션",
         subtitle: "Kaggle 스타일 AI 대회 운영 SPA",
         description:
@@ -251,6 +256,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "aid-homepage",
+        hashAliases: ["aid-hompage"],
         title: "AID 동아리 홈페이지",
         subtitle: "GitHub Pages 기반 동아리 소개 웹사이트",
         description:
@@ -300,6 +307,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "dongarimart",
         title: "동아리마트",
         subtitle: "대학교 동아리 등록 및 모집 웹 서비스",
         description:
@@ -369,6 +377,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
       "Major projects are organized in a card format. Click each card to view detailed descriptions and images.",
     projects: [
       {
+        slug: "tmoji",
         title: "TMOJI",
         subtitle: "AI Image Translation Service Preserving Font Style",
         description:
@@ -445,6 +454,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "ai-model-serving",
         title: "AI Competition Model Demo Application",
         subtitle: "Deep Learning Model Web Deployment Project",
         description:
@@ -504,6 +514,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "competition-app",
         title: "AI Competition Management & Registration Web Application",
         subtitle: "Kaggle-style AI Competition Management SPA",
         description:
@@ -585,6 +596,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "aid-homepage",
+        hashAliases: ["aid-hompage"],
         title: "AID Club Homepage",
         subtitle: "GitHub Pages Based Club Introduction Website",
         description:
@@ -634,6 +647,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "dongarimart",
         title: "DongariMart",
         subtitle: "University Club Registration & Recruitment Web Service",
         description:
@@ -703,6 +717,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
       "主要なプロジェクトをカード形式で整理しており、各カードをクリックすると詳細内容と画像をあわせて確認できます。",
     projects: [
       {
+        slug: "tmoji",
         title: "TMOJI",
         subtitle: "フォントスタイルを維持する画像翻訳AIサービス",
         description:
@@ -779,6 +794,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "ai-model-serving",
         title: "サークルAI大会優秀作デモアプリケーション",
         subtitle: "ディープラーニングモデルWebデプロイプロジェクト",
         description:
@@ -838,6 +854,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "competition-app",
         title: "サークルAI大会運営・受付Webアプリケーション",
         subtitle: "KaggleスタイルAI大会運営SPA",
         description:
@@ -919,6 +936,8 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "aid-homepage",
+        hashAliases: ["aid-hompage"],
         title: "AIDサークルホームページ",
         subtitle: "GitHub Pagesベースのサークル紹介Webサイト",
         description:
@@ -968,6 +987,7 @@ export const portfolioContent: Record<Lang, PortfolioContent> = {
         ],
       },
       {
+        slug: "dongarimart",
         title: "サークルマート",
         subtitle: "大学サークル登録・募集Webサービス",
         description:

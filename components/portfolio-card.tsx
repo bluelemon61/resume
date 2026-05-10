@@ -1,20 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import type { PortfolioProject } from "@/content/portfolio";
 import { withBasePath } from "@/lib/utils";
 
 export function PortfolioCard({ project }: { project: PortfolioProject }) {
+  const cardRef = useRef<HTMLElement>(null);
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const focusFromHash = () => {
+      const targetHash = decodeURIComponent(window.location.hash.slice(1));
+      const projectHashes = [project.slug, ...(project.hashAliases ?? [])];
+
+      if (!projectHashes.includes(targetHash)) {
+        return;
+      }
+
+      setOpen(true);
+
+      requestAnimationFrame(() => {
+        cardRef.current?.focus({ preventScroll: true });
+        cardRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    };
+
+    focusFromHash();
+    window.addEventListener("hashchange", focusFromHash);
+
+    return () => window.removeEventListener("hashchange", focusFromHash);
+  }, [project.hashAliases, project.slug]);
+
   return (
-    <article className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft transition print:rounded-none print:border print:p-5 print:shadow-none">
+    <article
+      ref={cardRef}
+      id={project.slug}
+      tabIndex={-1}
+      className="group scroll-mt-6 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-soft transition duration-200 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-4 print:rounded-none print:border print:p-5 print:shadow-none"
+    >
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex w-full flex-col text-left"
+        aria-expanded={open}
+        className="flex w-full cursor-pointer flex-col text-left"
       >
         {project.image && (
           <div className="relative aspect-video w-full bg-slate-100">
@@ -26,7 +59,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
               }
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-cover transition duration-300 group-hover:scale-[1.02]"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -41,7 +74,7 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
               <p className="mt-1 text-sm text-slate-500">{project.subtitle}</p>
             </div>
             <span
-              className={`mt-1 shrink-0 rounded-full bg-slate-100 p-2 text-slate-600 transition no-print ${
+              className={`mt-1 shrink-0 rounded-full bg-slate-100 p-2 text-slate-600 transition duration-300 group-hover:bg-slate-200 no-print ${
                 open ? "rotate-180" : ""
               }`}
             >
@@ -66,92 +99,100 @@ export function PortfolioCard({ project }: { project: PortfolioProject }) {
         </div>
       </button>
 
-      {open && (
-        <div className="border-t border-slate-200 px-6 py-6">
-          <div className="mb-5 flex flex-wrap gap-3 text-sm font-medium">
-            {project.githubUrl && (
-              <>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-black px-4 py-2 text-white no-print"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="print-only"
-                >
-                  GitHub: {project.githubUrl}
-                </a>
-              </>
-            )}
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-slate-300 px-4 py-2 text-slate-800 no-print"
-              >
-                Link
-              </a>
-            )}
-          </div>
-
-          <div className="space-y-6">
-            {project.details.map((block, index) => {
-              if (block.type === "text") {
-                return (
-                  <section
-                    key={`${project.title}-text-${index}`}
-                    className="space-y-2"
+      <div
+        aria-hidden={!open}
+        inert={!open}
+        className={`grid transition-all duration-300 ease-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="min-h-0 overflow-hidden">
+          <div className="border-t border-slate-200 px-6 py-6">
+            <div className="mb-5 flex flex-wrap gap-3 text-sm font-medium">
+              {project.githubUrl && (
+                <>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full bg-black px-4 py-2 text-white no-print"
                   >
-                    {block.title && (
-                      <h4 className="text-base font-semibold text-slate-900">
-                        {block.title}
-                      </h4>
-                    )}
-                    <p className="text-sm leading-7 text-slate-700 whitespace-pre-line">
-                      {block.content}
-                    </p>
-                  </section>
-                );
-              }
-
-              return (
-                <figure
-                  key={`${project.title}-image-${index}`}
-                  className="space-y-3"
+                    GitHub
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="print-only"
+                  >
+                    GitHub: {project.githubUrl}
+                  </a>
+                </>
+              )}
+              {project.demoUrl && (
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-300 px-4 py-2 text-slate-800 no-print"
                 >
-                  <div className="w-full max-w-5xl">
-                    <Image
-                      src={
-                        block.src.startsWith("http")
-                          ? block.src
-                          : withBasePath(block.src)
-                      }
-                      alt={block.alt}
-                      width={1024}
-                      height={1024}
-                      className="h-auto max-w-full w-auto rounded-2xl"
-                      sizes="(max-width: 1024px) 100vw, 1024px"
-                    />
-                  </div>
+                  Link
+                </a>
+              )}
+            </div>
 
-                  {block.caption && (
-                    <figcaption className="text-xs leading-6 text-slate-500">
-                      {block.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              );
-            })}
+            <div className="space-y-6">
+              {project.details.map((block, index) => {
+                if (block.type === "text") {
+                  return (
+                    <section
+                      key={`${project.title}-text-${index}`}
+                      className="space-y-2"
+                    >
+                      {block.title && (
+                        <h4 className="text-base font-semibold text-slate-900">
+                          {block.title}
+                        </h4>
+                      )}
+                      <p className="text-sm leading-7 text-slate-700 whitespace-pre-line">
+                        {block.content}
+                      </p>
+                    </section>
+                  );
+                }
+
+                return (
+                  <figure
+                    key={`${project.title}-image-${index}`}
+                    className="space-y-3"
+                  >
+                    <div className="w-full max-w-5xl">
+                      <Image
+                        src={
+                          block.src.startsWith("http")
+                            ? block.src
+                            : withBasePath(block.src)
+                        }
+                        alt={block.alt}
+                        width={1024}
+                        height={1024}
+                        className="h-auto max-w-full w-auto rounded-2xl"
+                        sizes="(max-width: 1024px) 100vw, 1024px"
+                      />
+                    </div>
+
+                    {block.caption && (
+                      <figcaption className="text-xs leading-6 text-slate-500">
+                        {block.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              })}
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </article>
   );
 }
